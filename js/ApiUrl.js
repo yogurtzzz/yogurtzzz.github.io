@@ -1,5 +1,5 @@
 // const BASE_URL = 'http://localhost:8088'
-const BASE_URL = 'http://112.74.80.115:8088'
+const BASE_URL = 'https://112.74.80.115:8088'
 
 const API_GET_ALL_PLAYERS = BASE_URL + '/getAllPlayers'
 
