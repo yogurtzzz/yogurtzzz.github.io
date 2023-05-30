@@ -4,8 +4,17 @@ let players = []
 let mainContainer = document.getElementById("main-container")
 
 window.onload = function () {
+    // 先进行登录验证, 输入正确的密码才能进入页面操作, 因为这个页面需要部署到公网
+    login()
     // 初始化玩家信息
     flushPlayers()
+}
+
+function login() {
+    while (true) {
+        let pw = prompt('请输入管理员密码')
+        if (pw === 'F**k_runasap') break;
+    }
 }
 
 // 把 enabled = true 的放在前面
