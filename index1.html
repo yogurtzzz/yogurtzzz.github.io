@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div style="display: block">
+            当前玩家 :
+        </div>
+
+        <div id="players">
+
+        </div>
+
+        <br/>
+
+        <div style="justify-content: space-evenly">
+            <button id="addUser" onclick="addPlayer()">添加玩家</button>
+            <button id="removeUser" onclick="removePlayer()">移除玩家</button>
+            <button id="rollIt" onclick="rollIt()">开始摇摆</button>
+            <button id="lock" onclick="lockOrUnlock(this)">锁定选择</button>
+            <label for="bonus">奖励系数</label><input id="bonus" name="bonus" type="number" min="1.0" max="20.0" value="2">
+        </div>
+        <br/><br/>
+        <div id="main-container">
+
+        </div>
+
+
+        <br/>
+        <br/>
+
+        <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="successResult" name="gameResult" value="SUCCESS" checked><label for="successResult">胜利</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="failResult" name="gameResult" value="FAIL"><label for="failResult">失败</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="saveGameRecord" onclick="saveGameRecord()">保存对局</button>
+        </div>
+
+        <br/>
+        <br/>
+
+        <div id="currentTxResult" style="margin: 2px 10px">
+            <!-- 这里展示本局结算结果, 比如 A 要给B 转多少钱 -->
+        </div>
+
+        <br/>
+        <br/>
+
+        <button id="queryGameRecordHistory" onclick="queryGameRecordHistory()" style="margin: 2px 10px">查询历史对局</button>
+        <!-- 这里展示历史对局记录 -->
+        <br/>
+        <br/>
+        <div id="historyRecord">
+
+        </div>
+
+        <br/>
+        <br/>
+
+
+        <button id="queryPlayersIncome" onclick="queryPlayersIncome()" style="margin: 2px 10px">查询玩家收益</button>
+        <br/>
+        <br/>
+        <!-- 这里展示玩家的收入 -->
+        <div id="playersIncome">
+
+        </div>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/const.js"></script>
+        <script src="js/ApiUrl.js"></script>
+        <script src="js/PositionSelector.js"></script>
+        <script src="js/LegendSelector.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
