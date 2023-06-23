@@ -42,7 +42,7 @@
 
     let diff = Math.abs(today - firstDay)
 
-    let diffDays = Math.ceil(diff / (1000 * 60 * 60 * 24))
+    let diffDays = Math.floor(diff / (1000 * 60 * 60 * 24))
 
     let nth = diffDays + 1
 
@@ -54,7 +54,7 @@
 
     let mainContainer = document.getElementById('main')
 
-    pElement.innerText = '今天是' + today.toDateString() + ',戒色的第' + nth + '天, 百日筑基还剩' + remain + '天, 今天破戒罚款' + bonus + '元'
+    pElement.innerText = '今天是' + today.toLocaleDateString() + ',戒色的第' + nth + '天, 百日筑基还剩' + remain + '天, 今天破戒罚款' + bonus + '元'
 
     mainContainer.appendChild(pElement)
 
